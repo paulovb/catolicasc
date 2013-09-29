@@ -1,0 +1,89 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="mobile.aspx.cs" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<# var viewDataType = (EnvDTE.CodeType) Model.ViewDataType; #>
+<# var fullModelName = Model.Namespace+"."+Model.ViewDataTypeName; #>
+using Microsoft.AspNet.FriendlyUrls.ModelBinding;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+<# if(!string.IsNullOrEmpty(Model.Namespace)) { #>
+using <#= Model.Namespace #>;
+<# } #>
+<# if(!string.IsNullOrEmpty(Model.DBContextNamespace) && (Model.DBContextNamespace != Model.Namespace)) { #>
+using <#= Model.DBContextNamespace #>;
+<# } #>
+
+namespace <#= Model.DefaultNamespace #>.<#=Model.ViewDataTypeName#>Actions
+{
+    public partial class Edit_mobile : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        // This is the Update methd to update the selected <#=Model.ViewDataTypeName#> item
+        // USAGE: <asp:FormView UpdateMethod="UpdateItem">
+        public void UpdateItem(int <#= Model.PrimaryKeyName #>)
+        {
+            using (var context = new <#= Model.DBContextType #>())
+            {
+                var item = context.<#= Model.PluralizedName #>.Find(<#= Model.PrimaryKeyName #>);
+
+                if (item == null)
+                {
+                    // The item wasn't found
+                    ModelState.AddModelError("", String.Format("Item with id {0} was not found", <#= Model.PrimaryKeyName #>));
+                    return;
+                }
+
+                TryUpdateModel(item);
+
+                if (ModelState.IsValid)
+                {
+                    // Save changes here
+                    context.SaveChanges();
+                    Response.Redirect("../Default");
+                }
+            }
+        }
+
+        // This is the Select methd to selects a single <#=Model.ViewDataTypeName#> item with the id
+        // USAGE: <asp:FormView SelectMethod="GetItem">
+        public <#=fullModelName#> GetItem([FriendlyUrlSegmentsAttribute(0)]int? <#= Model.PrimaryKeyName #>)
+        {
+            if (<#= Model.PrimaryKeyName #> == null)
+            {
+                return null;
+            }
+
+            using (var context = new <#= Model.DBContextType #>())
+            {
+                return context.<#= Model.PluralizedName #>.Find(<#= Model.PrimaryKeyName #>);
+            }
+        }
+
+        protected void ItemCommand(object sender, FormViewCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("Cancel", StringComparison.OrdinalIgnoreCase))
+            {
+                Response.Redirect("../Default");
+            }
+        }
+    }
+}

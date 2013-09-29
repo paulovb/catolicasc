@@ -1,0 +1,121 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="mobile.aspx" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<# var viewDataType = (EnvDTE.CodeType) Model.ViewDataType; #>
+<# var fullModelName = Model.Namespace+"."+Model.ViewDataTypeName; #>
+<#
+int CPHCounter = 1;
+if(Model.IsContentMobilePage) {
+#>
+<%@ Page Title="<#= Model.ViewDataTypeName #>Insert" Language="C#" MasterPageFile="~/<#= Model.MobileMasterPageFile #>" CodeBehind="Insert.mobile.aspx.cs" Inherits="<#= Model.DefaultNamespace #>.<#=Model.ViewDataTypeName#>Actions.Insert_mobile" %>
+
+<#
+    foreach(string cphid in Model.SectionNames) {
+        if(cphid.Equals("HeadContent", StringComparison.OrdinalIgnoreCase)) {
+#>
+<asp:Content runat="server" ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= cphid #>">
+    <link rel="stylesheet" href="/Content/jquery.mobile-1.2.0.css" />
+    <link rel="stylesheet" href="/Content/jquery.mobile.structure-1.2.0.css" />
+    <link rel="stylesheet" href="/Content/jquery.mobile.theme-1.2.0.css" />
+</asp:Content>
+
+<#
+            CPHCounter++;
+        }
+    }
+#>
+<asp:Content runat="server" ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= Model.PrimarySectionName #>">
+<#
+} else {
+#>
+<%@ Page Title="<#= Model.ViewDataTypeName #>Insert" Language="C#" CodeBehind="Insert.mobile.aspx.cs" Inherits="<#= Model.DefaultNamespace #>.<#=Model.ViewDataTypeName#>Actions.Insert_mobile" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" href="/Content/jquery.mobile-1.2.0.css" />
+    <link rel="stylesheet" href="/Content/jquery.mobile.structure-1.2.0.css" />
+    <link rel="stylesheet" href="/Content/jquery.mobile.theme-1.2.0.css" />
+    <title></title>
+</head>
+<body>
+  <form runat="server" id="form1">
+<#
+    PushIndent("    ");
+}
+#>
+    <div data-role="page">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+            </Scripts>
+        </asp:ScriptManager>
+        <script>
+            $(document).on("mobileinit", function () { $.mobile.ajaxEnabled = false; });
+        </script>
+        <script src="/Scripts/jquery.mobile-1.2.0.js"></script>
+        <div data-role="header">
+            <h2>Insert <#= Model.ViewDataTypeName #></h2>
+        </div>
+        <div data-role="content">
+            <asp:ValidationSummary runat="server" CssClass="validation-summary-errors" />
+            <asp:FormView runat="server"
+                ItemType="<#=fullModelName#>" DefaultMode="Insert" InsertItemPosition="FirstItem"
+                InsertMethod="InsertItem"
+                OnItemCommand="ItemCommand" RenderOuterTable="false">
+                <InsertItemTemplate>
+                    <fieldset>
+                        <ul data-role="listview" data-inset="true">
+                            <asp:DynamicEntity runat="server" Mode="Insert" />
+                            <li data-role="fieldcontain">
+                                <asp:Button runat="server" ID="InsertButton" CommandName="Insert" Text="Insert" />
+                            </li>
+                            <li data-role="fieldcontain">
+                                <asp:Button runat="server" ID="CancelButton" CommandName="Cancel" Text="Cancel" CausesValidation="false" />
+                            </li>
+                        </ul>
+                    </fieldset>
+                </InsertItemTemplate>
+            </asp:FormView>
+        </div>
+    </div>
+<#
+// The following code closes the asp:Content tag used in the case of a master page and the body and html tags in the case of a regular view page
+#>
+<#
+if(Model.IsContentMobilePage) {
+#>
+</asp:Content>
+<#
+    foreach(string cphid in Model.SectionNames) {
+        if(!cphid.Equals("HeadContent", StringComparison.OrdinalIgnoreCase) && !cphid.Equals(Model.PrimarySectionName, StringComparison.OrdinalIgnoreCase)) {
+            CPHCounter++;
+#>
+
+<asp:Content runat="server" ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= cphid #>">
+</asp:Content>
+<#
+        }
+    }
+#>
+<#
+} else if(!Model.IsContentMobilePage) {
+    ClearIndent();
+#>
+    </form>
+</body>
+</html>
+<#
+}
+#>

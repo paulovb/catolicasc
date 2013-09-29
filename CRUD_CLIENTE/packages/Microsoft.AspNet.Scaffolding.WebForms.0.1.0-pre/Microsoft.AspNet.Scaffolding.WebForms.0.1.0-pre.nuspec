@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Scaffolding.WebForms</id>
+    <version>0.1.0-pre</version>
+    <title>ASP.NET Web Forms Scaffold Generator</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/ASPNET_Scaffolding_Prerelease_EULA_ENU.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>ASP.NET Web Forms Scaffold Generator</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>Microsoft Aspnet Scaffolding WebForms</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Scaffolding.Infrastructure" version="0.1.0-pre" />
+      <dependency id="jquery.mobile" version="1.2.0" />
+      <dependency id="Microsoft.AspNet.FriendlyUrls.Core" version="1.0.0" />
+      <dependency id="Microsoft.Aspnet.FriendlyUrls" version="1.0.0" />
+      <dependency id="DynamicDataTemplatesCS" version="1.0.1" />
+      <dependency id="EntityFramework" version="[5.0.0, 6.0.0)" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Data.Entity" targetFramework=".NETFramework4.5" />
+    </frameworkAssemblies>
+    <references />
+  </metadata>
+</package>
