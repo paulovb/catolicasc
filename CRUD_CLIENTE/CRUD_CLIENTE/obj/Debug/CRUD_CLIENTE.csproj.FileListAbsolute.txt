@@ -31,3 +31,36 @@ c:\users\paulo\documents\visual studio 2012\Projects\CRUD_CLIENTE\CRUD_CLIENTE\b
 c:\users\paulo\documents\visual studio 2012\Projects\CRUD_CLIENTE\CRUD_CLIENTE\obj\Debug\CRUD_CLIENTE.csprojResolveAssemblyReference.cache
 c:\users\paulo\documents\visual studio 2012\Projects\CRUD_CLIENTE\CRUD_CLIENTE\obj\Debug\CRUD_CLIENTE.dll
 c:\users\paulo\documents\visual studio 2012\Projects\CRUD_CLIENTE\CRUD_CLIENTE\obj\Debug\CRUD_CLIENTE.pdb
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\CRUD_CLIENTE.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\CRUD_CLIENTE.pdb
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Antlr3.Runtime.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.Core.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\EntityFramework.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\System.Web.Optimization.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\System.Web.Providers.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\WebGrease.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\EntityFramework.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.Core.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\obj\Debug\CRUD_CLIENTE.dll
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\obj\Debug\CRUD_CLIENTE.pdb
+C:\Users\paulo\Documents\GitHub\catolicasc\CRUD_CLIENTE\CRUD_CLIENTE\obj\Debug\CRUD_CLIENTE.csprojResolveAssemblyReference.cache
