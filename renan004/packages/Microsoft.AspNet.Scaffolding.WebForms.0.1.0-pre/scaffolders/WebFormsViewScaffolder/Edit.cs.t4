@@ -1,0 +1,102 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="aspx" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<# var viewDataType = (EnvDTE.CodeType) Model.ViewDataType; #>
+<# var fullModelName = Model.Namespace+"."+Model.ViewDataTypeName; #>
+<#
+int CPHCounter = 1;
+if(Model.IsContentPage) {
+#>
+<%@ Page Title="<#= Model.ViewDataTypeName #>Edit" Language="C#" MasterPageFile="~/<#= Model.MasterPageFile #>" CodeBehind="Edit.aspx.cs" Inherits="<#= Model.DefaultNamespace #>.<#=Model.ViewDataTypeName#>Actions.Edit" %>
+
+<#
+    foreach(string cphid in Model.SectionNames) {
+        if(cphid.Equals("HeadContent", StringComparison.OrdinalIgnoreCase)) {
+#>
+<asp:Content runat="server" ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= cphid #>">
+</asp:Content>
+
+<#
+            CPHCounter++;
+        }
+    }
+#>
+<asp:Content runat="server" ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= Model.PrimarySectionName #>">
+<#
+} else {
+#>
+<%@ Page Title="<#= Model.ViewDataTypeName #>Edit" Language="C#" CodeBehind="Edit.aspx.cs" Inherits="<#= Model.DefaultNamespace #>.<#=Model.ViewDataTypeName#>Actions.Edit" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form runat="server" id="form1">
+<#
+    PushIndent("    ");
+}
+#>
+    <div>
+        <h2>Edit <#= Model.ViewDataTypeName #></h2>
+        <asp:ValidationSummary runat="server" CssClass="validation-summary-errors" />
+        <asp:FormView runat="server"
+            ItemType="<#=fullModelName#>" DefaultMode="Edit" DataKeyNames="<#= Model.PrimaryKeyName #>"
+            UpdateMethod="UpdateItem" SelectMethod="GetItem"
+            OnItemCommand="ItemCommand" RenderOuterTable="false">
+            <EmptyDataTemplate>
+                Cannot find the <#= Model.ViewDataTypeName #> with <#= Model.PrimaryKeyName #> <%= Request.GetFriendlyUrlSegments()[0] %>
+            </EmptyDataTemplate>
+            <EditItemTemplate>
+                <fieldset>
+                    <legend>Edit <#= Model.ViewDataTypeName #></legend>
+                    <ol>
+                        <asp:DynamicEntity runat="server" Mode="Edit" />
+                    </ol>
+                    <asp:Button runat="server" ID="UpdateButton" CommandName="Update" Text="Update" />
+                    <asp:Button runat="server" ID="CancelButton" CommandName="Cancel" Text="Cancel" CausesValidation="false" />
+                </fieldset>
+            </EditItemTemplate>
+        </asp:FormView>
+    </div>
+<#
+// The following code closes the asp:Content tag used in the case of a master page and the body and html tags in the case of a regular view page
+#>
+<#
+if(Model.IsContentPage) {
+#>
+</asp:Content>
+<#
+    foreach(string cphid in Model.SectionNames) {
+        if(!cphid.Equals("HeadContent", StringComparison.OrdinalIgnoreCase) && !cphid.Equals(Model.PrimarySectionName, StringComparison.OrdinalIgnoreCase)) {
+            CPHCounter++;
+#>
+
+<asp:Content runat="server" ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= cphid #>">
+</asp:Content>
+<#
+        }
+    }
+#>
+<#
+} else if(!Model.IsContentPage) {
+    ClearIndent();
+#>
+    </form>
+</body>
+</html>
+<#
+}
+#>
