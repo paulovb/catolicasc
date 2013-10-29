@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Scaffolding.Infrastructure</id>
+    <version>0.1.0-pre</version>
+    <title>ASP.NET Scaffolding Infrastructure</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/ASPNET_Scaffolding_Prerelease_EULA_ENU.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>The infrastucture for supporting scaffold generators installed as NuGet packages.</description>
+    <tags>Microsoft AspNet Scaffolding</tags>
+    <references />
+  </metadata>
+</package>

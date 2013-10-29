@@ -1,0 +1,9 @@
+﻿<configuration>
+  <system.web>
+    <pages>
+      <namespaces>
+        <add namespace="Microsoft.AspNet.FriendlyUrls"/>
+      </namespaces>
+    </pages>
+  </system.web>
+</configuration>

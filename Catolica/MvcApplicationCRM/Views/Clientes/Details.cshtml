@@ -1,0 +1,92 @@
+﻿@model MvcApplicationCRM.Models.Cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<fieldset>
+    <legend>Cliente</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sexo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sexo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Saldo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Saldo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rua)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rua)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Numero)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Numero)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Complemento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Complemento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Bairro)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bairro)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Estado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Estado)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CEP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CEP)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>
