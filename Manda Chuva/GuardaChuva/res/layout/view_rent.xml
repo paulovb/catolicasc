@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#3399FF"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- Registration Form -->
+
+        <LinearLayout
+            style="@style/btnStyleHaiti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <!-- Name Label -->
+
+            <TextView
+                android:id="@+id/rent_return"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Devolução"
+                android:textAlignment="center" />
+
+            <DatePicker
+                android:id="@+id/datePicker1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/rent_product"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:enabled="false" />
+
+            <AutoCompleteTextView
+                android:id="@+id/customer_cpf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/customer_cpf"
+                android:inputType="numberSigned"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </AutoCompleteTextView>
+
+            <EditText
+                android:id="@+id/customer_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:enabled="false"
+                android:hint="@string/customer_name"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/customer_mail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:enabled="false"
+                android:hint="@string/customer_mail"
+                android:singleLine="true" />
+
+            <!-- Register Button -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp" >
+
+                <Button
+                    android:id="@+id/btn_rent_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.80"
+                    android:background="@drawable/button_blue"
+                    android:text="@string/save_button"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Registration Form Ends -->
+
+    </RelativeLayout>
+
+</ScrollView>
