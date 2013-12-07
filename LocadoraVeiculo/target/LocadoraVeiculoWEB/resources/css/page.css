@@ -1,0 +1,24 @@
+.k-grid,
+.k-listview {
+    background: rgba(255, 255, 255, 0.8);
+}
+.k-grid-content > table > tbody {
+    background: #ffffff !important;
+    color: #000;
+    font-size: 14px;
+}
+.k-grid-header .k-header, .k-widget,
+.k-textbox, .k-button,
+.k-link, .k-window-title, .k-item,
+.k-state-selected, .k-state-focused,
+.k-text, .k-select, .k-datetimepicker, .k-picker-wrap, .k-state-default {
+    font-size: 14px !important; 
+}
+.k-datetimepicker .k-select {
+    width: 3.2em !important;
+}
+.k-input {
+    padding: 1px 0.3em !important;
+    height: 2em !important;
+    line-height: 1.2em !important
+}

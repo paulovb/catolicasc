@@ -1,0 +1,432 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot');
+	src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 5px 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	min-width: 105px;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Button 3 */
+.btn-3 {
+	background: #6cbfee;
+	color: #fff;
+}
+
+.btn-3:hover {
+	background: #3594cb;
+}
+
+.btn-3:active {
+	background: #3594cb;
+	top: 2px;
+}
+
+.btn-3:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
+
+/* Button 3a */
+.btn-3a {
+	padding: 25px 60px 25px 120px;
+}
+
+.btn-3a:before {
+	background: rgba(0,0,0,0.05);
+}
+
+/* Button 3b */
+.btn-3b {
+	padding: 25px 60px 25px 120px;
+	border-radius: 10px;
+}
+
+.btn-3b:before {
+	border-right: 2px solid rgba(255,255,255,0.5);
+}
+
+/* Button 3c */
+.btn-3c {
+	padding: 80px 20px 20px 20px;
+	border-radius: 10px;
+	box-shadow: 0 3px #3594cb;
+}
+
+.btn-3c:active {
+	box-shadow: 0 3px #0a7ac2;
+}
+
+.btn-3c:before {
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+	background: #fff;
+	color: #3594cb;
+	border-radius: 10px 10px 0 0;
+}
+
+.btn-3c:active:before {
+	color: #3594cb;
+}
+
+/* Button 3d */
+.btn-3d {
+	padding: 25px 60px 25px 120px;
+	border-radius: 10px;
+}
+
+.btn-3d:before {
+	background: #fff;
+	color: #6cbfee;
+	z-index: 2;
+	border-radius: 10px 0 0 10px;
+}
+
+.btn-3d:after {
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	z-index: 1;
+	left: 55px;
+	top: 50%;
+	margin: -10px 0 0 -10px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.btn-3d:active:before {
+	color: #3594cb;
+}
+
+.btn-3d:active {
+	top: 0;
+}
+
+.btn-3d:active:after {
+	left: 60px;
+}
+
+/* Button 3e */
+.btn-3e {
+	padding: 25px 120px 25px 60px;
+	overflow: hidden;
+}
+
+.btn-3e:before {
+	left: auto;
+	right: 10px;
+	z-index: 2;
+}
+
+.btn-3e:after {
+	width: 30%;
+	height: 200%;
+	background: rgba(255,255,255,0.1);
+	z-index: 1;
+	right: 0;
+	top: 0;
+	margin: -5px 0 0 -5px;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(-20deg);
+	-moz-transform-origin: 0 0;
+	-moz-transform: rotate(-20deg);
+	-ms-transform-origin: 0 0;
+	-ms-transform: rotate(-20deg);
+	transform-origin: 0 0;
+	transform: rotate(-20deg);
+}
+
+.btn-3e:hover:after {
+	width: 40%;
+}
+
+.icon-cart:before {
+	content: "\e000";
+}
+.icon-meter:before {
+	content: "\e001";
+}
+.icon-cloud-upload:before {
+	content: "\e002";
+}
+.icon-earth:before {
+	content: "\e003";
+}
+.icon-share:before {
+	content: "\e004";
+}
+.icon-loop:before {
+	content: "\e005";
+}
+.icon-bubble:before {
+	content: "\e006";
+}
+.icon-clock:before {
+	content: "\e007";
+}
+.icon-calendar:before {
+	content: "\e008";
+}
+.icon-tag:before {
+	content: "\e009";
+}
+.icon-coin:before {
+	content: "\e00a";
+}
+.icon-quill:before {
+	content: "\e00b";
+}
+.icon-connection:before {
+	content: "\e00c";
+}
+.icon-paint-format:before {
+	content: "\e00d";
+}
+.icon-home:before {
+	content: "\e00e";
+}
+.icon-pacman:before {
+	content: "\e00f";
+}
+.icon-cog:before {
+	content: "\e010";
+}
+.icon-busy:before {
+	content: "\e011";
+}
+.icon-user:before {
+	content: "\e012";
+}
+.icon-tv:before {
+	content: "\e013";
+}
+.icon-happy:before {
+	content: "\e014";
+}
+.icon-smiley:before {
+	content: "\e015";
+}
+.icon-wink:before {
+	content: "\e016";
+}
+.icon-wink-2:before {
+	content: "\e017";
+}
+.icon-happy-2:before {
+	content: "\e018";
+}
+.icon-smiley-2:before {
+	content: "\e019";
+}
+.icon-star:before {
+	content: "\e01a";
+}
+.icon-star-2:before {
+	content: "\e01b";
+}
+.icon-star-3:before {
+	content: "\e01c";
+}
+.icon-heart:before {
+	content: "\e01d";
+}
+.icon-heart-2:before {
+	content: "\e01e";
+}
+.icon-thumbs-up:before {
+	content: "\e01f";
+}
+.icon-heart-broken:before {
+	content: "\e020";
+}
+.icon-thumbs-up-2:before {
+	content: "\e021";
+}
+.icon-globe:before {
+	content: "\e022";
+}
+.icon-eye:before {
+	content: "\e023";
+}
+.icon-eye-blocked:before {
+	content: "\e024";
+}
+.icon-eye-2:before {
+	content: "\e025";
+}
+.icon-truck:before {
+	content: "\e026";
+}
+.icon-gift:before {
+	content: "\e027";
+}
+.icon-rocket:before {
+	content: "\e028";
+}
+.icon-lightning:before {
+	content: "\e029";
+}
+.icon-tongue:before {
+	content: "\e02a";
+}
+.icon-tongue-2:before {
+	content: "\e02b";
+}
+.icon-search:before {
+	content: "\e02c";
+}
+.icon-pie:before {
+	content: "\e02d";
+}
+.icon-stats:before {
+	content: "\e02e";
+}
+.icon-bars:before {
+	content: "\e02f";
+}
+.icon-bars-2:before {
+	content: "\e030";
+}
+.icon-cart-2:before {
+	content: "\e031";
+}
+.icon-cart-3:before {
+	content: "\e032";
+}
+.icon-barcode:before {
+	content: "\e033";
+}
+.icon-qrcode:before {
+	content: "\e034";
+}
+.icon-ticket:before {
+	content: "\e035";
+}
+.icon-location:before {
+	content: "\e036";
+}
+.icon-pushpin:before {
+	content: "\e037";
+}
+.icon-phone:before {
+	content: "\e038";
+}
+.icon-phone-hang-up:before {
+	content: "\e039";
+}
+.icon-address-book:before {
+	content: "\e03a";
+}
+.icon-notebook:before {
+	content: "\e03b";
+}
+.icon-screen:before {
+	content: "\e03c";
+}
+
+.btnNoty {
+	-webkit-user-select: none;
+	cursor: pointer;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background-image: none;
+	background-position: 50% 50%;
+	vertical-align: middle;
+	margin: 0;
+	padding: 2px 7px 2px;
+	font-family: inherit;
+	line-height: 1.66em;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-style: solid;
+	border-width: 1px;
+	-webkit-appearance: none;
+	text-transform: none;
+}
+
+.btnNotyYes {	
+	color: #fff;
+	border-color: #0066CC;
+	background-color: #0066CC;
+}
+
+.btnNotyYes:hover {
+	color: #fff;
+	border-color: #0099FF;
+	background-color: #0099FF;
+}
+
+.btnNotyNo {	
+	color: #fff;
+	border-color: #CD0000;
+	background-color: #CD0000;
+}
+
+.btnNotyNo:hover {
+	color: #fff;
+	border-color: #FF0000;
+	background-color: #FF0000;
+}
