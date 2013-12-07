@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.pvb.guardachuva"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="br.com.pvb.guardachuva.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme"
+            android:name=".CustomerActivity">
+        </activity>
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme"
+            android:name=".RentActivity">
+        </activity>       
+        
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" 
+            android:screenOrientation="landscape" 
+            android:name="com.google.zxing.client.android.CaptureActivity">
+        </activity>
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3399FF"
+    android:orientation="vertical"
+    tools:context=".FullscreenActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_btn_haiti"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="@string/app_name"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp" >
+
+                    <Button
+                        android:id="@+id/searchcustomer"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.33"
+                        android:drawableTop="@drawable/search"
+                        android:text="@string/search_button" />
+
+                    <Button
+                        android:id="@+id/registrycustomer"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.33"
+                        android:drawableTop="@drawable/person"
+                        android:text="@string/registry_customer_button" />
+
+                    <Button
+                        android:id="@+id/registryumbrela"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.33"
+                        android:drawableTop="@drawable/new_product"
+                        android:text="@string/registry_umbrela_button" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp" >
+
+                    <Button
+                        android:id="@+id/rentumbrela"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.33"
+                        android:drawableTop="@drawable/market"
+                        android:text="@string/rent_button" />
+
+                    <Button
+                        android:id="@+id/returnumbrela"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.33"
+                        android:drawableTop="@drawable/return_product"
+                        android:text="@string/return_button" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp" >
+
+                    <Button
+                        android:id="@+id/viewcalendar"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.33"
+                        android:drawableTop="@drawable/calendar_img"
+                        android:text="@string/calendar_button" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp" 
+                    android:paddingBottom="6dp">
+
+                    <Button
+                        android:id="@+id/info_defected"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/info_defect"
+                        android:text="@string/info_defected_button" />
+
+                    <Button
+                        android:id="@+id/story_rent"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/story"
+                        android:text="@string/story_rent_button" />
+
+                    <Button
+                        android:id="@+id/config"
+                        style="@style/btnStyleHaiti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/config"
+                        android:text="@string/config_button" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
